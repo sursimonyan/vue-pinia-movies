@@ -31,9 +31,7 @@ export const useSearchStore = defineStore('search', () => {
 
     const { favoriteMovies } = storeToRefs(movieStore);
 
-    const isInFavorite = favoriteMovies.value.some((item) => {
-      return item.id === movie.id;
-    })
+    const isInFavorite = favoriteMovies.value.some((item) => item.id === movie.id);
 
     if (!isInFavorite) {
       favoriteMovies.value.push({ ...movie, isWatched: false });
