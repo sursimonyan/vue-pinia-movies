@@ -6,17 +6,12 @@ import { useMovieStore } from '@/stores/Movie';
 import { useSearchStore } from '@/stores/Search';
 import { storeToRefs } from 'pinia';
 
-const props = defineProps({
-  movie: {
-    required: true,
-    type: Object as PropType<IMovie>,
-    default: () => {},
-  },
-  isSearch: {
-    type: Boolean,
-    default: false,
-  },
-});
+interface Props {
+  movie: IMovie;
+  isSearch?: boolean;
+}
+
+const props = defineProps<Props>();
 
 const movieStore = useMovieStore();
 const searchStore = useSearchStore();
