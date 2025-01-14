@@ -3,6 +3,6 @@
 
 <template>
   <main>
-    aaaaaaaaaa
+    
   </main>
 </template>

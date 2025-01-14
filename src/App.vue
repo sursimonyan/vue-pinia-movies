@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
 import { storeToRefs } from 'pinia';
 import { useMovieStore } from './stores/Movie';
 import Movie from './components/Movie.vue';
